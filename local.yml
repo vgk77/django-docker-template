@@ -16,6 +16,8 @@ services:
       - ./.envs/.local
     ports:
       - '8000:8000'
+    volumes:
+      - ./backend:/app
     depends_on:
       - db
     command: ./compose/django/dev_entrypoint.sh
