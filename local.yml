@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  db:
+    build:
+      context: ./backend
+      dockerfile: ./compose/postgres/Dockerfile
+    env_file:
+      - ./.envs/.local
+
+  app:
+    build:
+      context: ./backend
+      dockerfile: ./compose/django/Dockerfile
+    env_file:
+      - ./.envs/.local
+    ports:
+      - '8000:8000'
+    depends_on:
+      - db
+    command: ./compose/django/dev_entrypoint.sh
