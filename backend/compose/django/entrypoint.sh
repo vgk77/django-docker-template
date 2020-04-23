@@ -2,6 +2,7 @@
 
 # Collect static files
 echo "Collect static files"
+python manage.py migrate
 python manage.py collectstatic --noinput
 
 # Start server

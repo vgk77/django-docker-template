@@ -273,5 +273,6 @@ tags
 
 .ipython/
 .env
+.envs
 .envs/.production
 # !.envs/.local/

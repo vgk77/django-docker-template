@@ -1,4 +1,4 @@
-version: '3'
+version: '3.7'
 
 services:
   db:
@@ -6,16 +6,14 @@ services:
       context: ./backend
       dockerfile: ./compose/postgres/Dockerfile
     env_file:
-      - ./.envs/.local
+      - .envs
 
   app:
     build:
       context: ./backend
       dockerfile: ./compose/django/Dockerfile
     env_file:
-      - ./.envs/.local
-    environment:
-      DEBUG: 'True'
+      - .envs
     ports:
       - '8000:8000'
     volumes:
