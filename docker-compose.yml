@@ -1,5 +1,8 @@
 version: '3.7'
 
+volumes:
+  db-data: {}
+
 services:
   db:
     build:
@@ -7,6 +10,8 @@ services:
       dockerfile: ./compose/postgres/Dockerfile
     env_file:
       - .envs
+    volumes:
+      - db-data:/var/lib/postgresql/data
 
   app:
     build:
