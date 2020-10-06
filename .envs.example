@@ -7,7 +7,7 @@ SECRET_KEY=my_local_secret_key
 
 # PostgreSQL
 # ------------------------------------------------------------------------------
-POSTGRES_DB=procatalog_django_db
+POSTGRES_DB=projectname_django_db
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=postgres_local_Pa$$w0rd
 POSTGRES_SERVICE=db
