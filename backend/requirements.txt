@@ -1,5 +1,5 @@
 # https://www.python.org/dev/peps/pep-0440/#compatible-release
-Django==3.2.7
+Django==3.2.12
 psycopg2==2.9.1
 
 gunicorn==20.1.0
