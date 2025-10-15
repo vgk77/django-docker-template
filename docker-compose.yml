@@ -1,5 +1,3 @@
-version: '3.8'
-
 volumes:
   db-data:
 
@@ -9,7 +7,7 @@ services:
       context: ./backend
       dockerfile: ./compose/postgres/Dockerfile
     env_file:
-      - .envs
+      - .env
     volumes:
       - db-data:/var/lib/postgresql/data
 
@@ -18,7 +16,7 @@ services:
       context: ./backend
       dockerfile: ./compose/django/Dockerfile
     env_file:
-      - .envs
+      - .env
     ports:
       - '8000:8000'
     volumes:

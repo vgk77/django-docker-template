@@ -2,5 +2,5 @@
 
 ## Before run project prepare enironment variables:
 ```
-cp .envs.example .envs
+cp .env.example .env
 ```
